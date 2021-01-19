@@ -1,44 +1,44 @@
 {
-  "name": "AD_Group",
+  "name": "LDAP_Group",
   "version": "1.0",
-  "author": "Soumille Lucas",
+  "author": "Aaron Kaplan based on the work by Soumille Lucas",
   "url": "https://github.com/TheHive-Project/Cortex-Analyzers",
-  "license": "AGPL-V3",
-  "description": "Get all members of an AD group",
+  "license": "Apache License",
+  "description": "Get all members of an LDAP group",
   "dataTypeList": ["group"],
-  "baseConfig": "ActiveDirectory",
+  "baseConfig": "LDAP",
   "config": {
-    "service": "ad-group" 
+    "service": "ldap-group" 
   },
   "configurationItems": [
     {
       "name": "server",
-      "description": "Active Directory server",
+      "description": "LDAP server",
       "type": "string",
       "multi": false,
       "required": true
     },
     {
       "name": "bind_username",
-      "description": "Username used to bind Active Directory",
+      "description": "Username used to bind to LDAP",
       "type": "string",
       "multi": false,
       "required": true
     },
     {
       "name": "bind_password",
-      "description": "Password used to bind Active Directory",
+      "description": "Password used to bind to LDAP",
       "type": "string",
       "multi": false,
       "required": true
     },
     {
       "name": "baseDN",
-      "description": "DN used to search in Active Directory",
+      "description": "DN used to search in to LDAP",
       "type": "string",
       "multi": false,
       "required": true
     }
   ],
-  "command": "ActiveDirectoryAnalyzer/ActiveDirectory_Query.py"
+  "command": "LDAPAnalyzer/LDAP_Query.py"
 }
